@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2015, 1:54:45 PM
+    Author     : mzijlstra
+*/
+
+body {
+   /* background-image: url('snowcat.jpg'); */
+    font-family: Helvetica, sans-serif;
+}
+
+h1, h2 {
+    background-color: black;
+}
+
+h1 {
+    font-family: monospace;
+    text-align: center;
+    color: white;
+    text-shadow: -5px 5px gray;
+    letter-spacing: 3px;
+}
+
+section:nth-child(odd) {
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+h2 {
+    color: #FA0;
+    font-style: italic; 
+}
+
+.recent {
+    background-color: gray;
+}
+
+#FTL {
+    color: blue;
+}
