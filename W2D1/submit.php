@@ -7,7 +7,7 @@ $entery = filter_input(INPUT_POST, "entry");
 $honest = filter_input(INPUT_POST, "honest");
 
 if (!$name) {
-    header("Location: grades.php");
+    header("Location: grades.php?error=" . urlencode("Missing name"));
     exit();
 }
 
