@@ -5,10 +5,17 @@ require 'db.php';
 $user = filter_input(INPUT_POST, "user");
 $pass = filter_input(INPUT_POST, "pass");
 
-$stmt = $db->query("SELECT * FROM user WHERE user = '$user' AND pass = '$pass'");
+$user = $db->quote($user);
+$pass = $db->quote($pass);
+$sql = "SELECT * FROM user WHERE user = $user AND pass = $pass";
+echo $sql;
+
+$stmt = $db->query($sql);
 $row = $stmt->fetch();
 if ($row) {
-    header("Location: cars.php?user=" . urldecode($row['user']));
+    echo good;
+    //header("Location: cars.php?user=" . urldecode($row['user']));
 } else {
-    header("Location: index.php?error=Incorrect+user+or+pass");
+    echo bad;
+    //header("Location: index.php?error=Incorrect+user+or+pass");
 }
